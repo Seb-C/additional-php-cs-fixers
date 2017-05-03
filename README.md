@@ -27,7 +27,7 @@ return PhpCsFixer\Config::create()
 ```
 
 - Use the new rules as you wish:
-```
+```php
 $rules = [
     // ...
     'SebCAdditionalPhpCsFixers/disallow_unaliased_classes' => [
@@ -49,6 +49,6 @@ This is mainly useful/designed to force the use of aliased classes in some frame
 As example, with the following rules configuration:
 - `'Fuel\Core' => '',` will trigger an error everytime a class such as `Fuel\Core\Config` is directly called, and will suggest to replace it with `Config`
 - `'Illuminate\Support\Facades' => '',` will prevent a call like `Illuminate\Support\Facades\Validator` and replace it with `Validator`
-- `'Some\Evil\Stuff' => 'OtherStuff',` will replace `Some\Evil\Stuff\Foo::myFunction()` and replace it with `OtherStuff\Foo::myFunction()`
+- `'Some\Evil\Stuff' => 'OtherStuff',` will replace `Some\Evil\Stuff\Foo::myFunction()` with `OtherStuff\Foo::myFunction()`
 
 This also works with `use`d namespaces.
