@@ -122,7 +122,7 @@ class DisallowUnaliasedClasses implements FixerInterface, ConfigurableFixerInter
                     $to .= static::NS_SEPARATOR;
                 }
 
-                return new CodeSample("<?php\n{$to}SomeClass::someFunction(); // Instead of {$from}".static::NS_SEPARATOR."SomeClass::someFunction(); ?>");
+                return new CodeSample("<?php\n{$to}SomeClass::someFunction(); // Instead of {$from}".static::NS_SEPARATOR.'SomeClass::someFunction(); ?>');
             }, $this->namespaceReplacements, array_keys($this->namespaceReplacements))
         );
     }
