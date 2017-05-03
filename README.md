@@ -7,7 +7,7 @@ Add this package to your composer.json:
 ```json
 {
     "require-dev": {
-        "seb-c/additional-php-cs-fixers": "~1.0.0"
+        "novius/additional-php-cs-fixers": "~1.0.0"
     },
 }
 ```
