@@ -4,6 +4,8 @@ namespace SebC\AdditionalPhpCsFixers;
 
 use ReflectionClass;
 use PhpCsFixer\Utils;
+use PhpCsFixer\FixerDefinition\FixerDefinition;
+use PhpCsFixer\FixerDefinition\CodeSample;
 use PhpCsFixer\Fixer\ConfigurableFixerInterface;
 use PhpCsFixer\Fixer\FixerInterface;
 use PhpCsFixer\Tokenizer\Token;
@@ -114,10 +116,14 @@ class DisallowUnaliasedClasses implements FixerInterface, ConfigurableFixerInter
     public function getDefinition()
     {
         return new FixerDefinition(
-            'TODO',
-            [
-                new CodeSample('TODO2'),
-            ]
+            'Direct call to unaliased classes should be avoided.',
+            array_map(function ($to, $from) {
+                if (!empty($to)) {
+                    $to .= static::NS_SEPARATOR;
+                }
+
+                return new CodeSample("<?php\n{$to}SomeClass::someFunction(); // Instead of {$from}".static::NS_SEPARATOR."SomeClass::someFunction(); ?>");
+            }, $this->namespaceReplacements, array_keys($this->namespaceReplacements))
         );
     }
 

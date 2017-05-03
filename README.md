@@ -52,3 +52,9 @@ As example, with the following rules configuration:
 - `'Some\Evil\Stuff' => 'OtherStuff',` will replace `Some\Evil\Stuff\Foo::myFunction()` with `OtherStuff\Foo::myFunction()`
 
 This also works with `use`d namespaces.
+
+
+TODO
+====
+
+Unit tests
