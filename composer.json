@@ -1,0 +1,22 @@
+{
+    "name": "seb-c/additional-php-cs-fixers",
+    "description": "Some additional custom fixers for php-cs-fixer.",
+    "type": "library",
+    "version": "0.0.0",
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+    },
+    "authors": [
+        {
+            "name": "Sébastien Caparros",
+            "email": "contact@sebastien-caparros.name"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SebC\\AdditionalPhpCsFixers\\": "src/"
+        }
+    }
+}
