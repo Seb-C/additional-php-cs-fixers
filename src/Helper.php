@@ -11,7 +11,7 @@ class Helper
     public static function getCustomFixers()
     {
         return [
-            new SebC\AdditionalPhpCsFixers\DisallowUnaliasedClasses(),
+            new DisallowUnaliasedClasses(),
         ];
     }
 }
