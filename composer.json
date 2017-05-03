@@ -1,5 +1,5 @@
 {
-    "name": "seb-c/additional-php-cs-fixers",
+    "name": "novius/additional-php-cs-fixers",
     "description": "Some additional custom fixers for php-cs-fixer.",
     "type": "library",
     "version": "1.0.0",
