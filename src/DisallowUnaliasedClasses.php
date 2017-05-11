@@ -24,7 +24,7 @@ class DisallowUnaliasedClasses implements FixerInterface, ConfigurableFixerInter
         return "SebCAdditionalPhpCsFixers/$fixerName";
     }
 
-    public function configure(array $configuration = [])
+    public function configure(array $configuration = null)
     {
         if (isset($configuration['replace_namespaces'])) {
             foreach ($configuration['replace_namespaces'] as $from => $to) {
